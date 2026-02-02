@@ -5,6 +5,6 @@ length = input("Please enter the length of the rectangle: ")
 width = input("Please enter the width of the rectangle: ")
 area = float(length) * float(width)
 
-# Final Answer
+# Final Output
 print(f"The area of the rectangle is {area}cm²")
 
