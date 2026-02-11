@@ -15,6 +15,40 @@ story_lines = ["known to rob his opponent if he loses",
                "known to shoot his opponent out of anger",
                "known to cheat his dice rolls",
                "known to fart while he rolls for good luck"]
+dice_art = {
+    1: ("┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘"),
+    2: ("┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘"),
+    3: ("┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘"),
+    4: ("┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘"),
+    5: ("┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘"),
+    6: ("┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘")
+}
+dice = []
+num_of_dice = 2
 
 # main game
 def starter_menu():
@@ -84,16 +118,13 @@ def gamble_game():
         time.sleep(2)
         print(f"{opponent} wins the coinflip, he rolls first!")
         print("------------------------------------")
-        dice_rolling()
     else:
         print("A random homeless man barges in-between you too! He flips a coin!?")
         time.sleep(2)
+        print("*You won the coinflip, your up first*")
         print("Homeless Dude: You roll first young buck!")
         print("------------------------------------")
-        dice_rolling()
-
-def dice_rolling():
-    pass
+        selection = input(print("Hit ANY KEY to roll: ")).upper()
 
 def main():
     starter_menu()
